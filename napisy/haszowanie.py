@@ -4,9 +4,10 @@ def szukane_przez_haszowanie(sprawdzany, szukany):
     for i in range (len(szukany)):
         suma_szuk += ord ( szukany[i])
     suma = 0
-    for i in range (len(szukany)):
+    for i in range (len(szukany)-1):
         suma += ord ( sprawdzany[i])
-    for i in range(len(sprawdzany) - len(szukany) + 1):
+    for i in range(len(sprawdzany) - len(szukany) + 1 ):
+        suma += ord(sprawdzany[i + len(szukany) - 1])
         if suma == suma_szuk:
             znaleziono = True
             for j in range(len(szukany)):
@@ -16,10 +17,11 @@ def szukane_przez_haszowanie(sprawdzany, szukany):
             if znaleziono:
                 return i
         suma -=ord(sprawdzany[i])
-        suma += ord(sprawdzany[i + len(szukany)])
+
+    return "nie ma"
 
 
 if __name__ == '__main__':
  sprawdzany = "ala ma koguta, kota i psa"
- szukany = "kota"
+ szukany = "psy"
  print (szukane_przez_haszowanie(sprawdzany, szukany))
