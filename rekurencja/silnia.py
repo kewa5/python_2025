@@ -6,4 +6,3 @@ def silnia(n):
 
 
 if __name__ == '__main__':
-    print(silnia(6))
