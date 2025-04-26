@@ -27,7 +27,7 @@ def szyfruj(napis, klucz):
     return tablica
 
 def odszyfruj(napis, klucz):
-    pass
+      poczatek = wiersz * len(klucz)
 
 
 if __name__ == '__main__':
