@@ -1,16 +1,12 @@
 def silnia(n):
-    if n==0:
-        return 0
-    elif n==1:
-        return 1
+    if n>1:
+        return n*silnia(n-1)
     else:
-        wynik = n
-        for i in range(n-1):
-            wynik = wynik*(n-i-1)
-        return wynik
+        return 1
 
 if __name__ == '__main__':
-    print(silnia(1))
+    print(silnia(4))
 
-# T(kl)=
-# O(kl)=
+# M(N) = N
+# O(N) = N
+
